@@ -1,0 +1,90 @@
+<div *ngIf="(!a)&&(!b)&&(!c)&&(!d)&&(!e)&&(!f)&&(!g)&&(!h)||(!i)"class="box">
+    <!-- <div class="imgBx">
+        <img src="https://image.freepik.com/free-vector/girl-holding-book-isolated-cartoon-character-elementary-school-student-with-backpack_71593-230.jpg" width="1000" height="400">
+    </div> -->
+    
+    <div class="content">
+        <h2>Select the players</h2><br><br><br>
+ 
+               
+                <div class="team1">
+                    <button class="btn btn-sq-lg btn-primary" (click)="player1()">
+                        <img src="../../assets/players/player1.jpg"width="100" height="100"><br>
+                        Dileep
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player2()">
+                        <img src="../../assets/players/player2.jpg"width="100" height="100"><br>
+                        Boost
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player3()">
+                        <img src="../../assets/players/player3.jpg"width="100" height="100"><br>
+                        Tussi
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player8()">
+                        <img src="../../assets/players/player8.jpg"width="100" height="100"><br>
+                        Chimpu
+                    </button>&nbsp;&nbsp;
+
+                </div><br><br>
+                <div class="team2">
+                    <button class="btn btn-sq-lg btn-primary" (click)="player4()">
+                        <img src="../../assets/players/player4.jpg"width="100" height="100"><br>
+                         Pradeep
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player5()">
+                        <img src="../../assets/players/player5.jpg" width="100" height="100"><br>
+                        Harshi
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player6()">
+                        <img src="../../assets/players/player6.jpg"width="100" height="100"><br>
+                        Krish
+                    </button>&nbsp;&nbsp;
+                    <button class="btn btn-sq-lg btn-primary" (click)="player7()">
+                        <img src="../../assets/players/player7.jpg"width="100" height="100"><br>
+                        Balaji
+                    </button>&nbsp;&nbsp;
+                </div>
+    </div>
+</div>
+<div class="container">
+    <div *ngIf="(a)&&(i)" class="gif">
+        <img #a src="../../assets/gifs/player1.gif"><br>
+        <button mat-raised-button color="primary" type="button" (click)="start(1)">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button color="primary" (click)="back()" type="button">Back</button>
+    </div>
+    <div *ngIf="b&&(i)" class="gif">
+        <img src="../../assets/gifs/player2.gif"><br>
+        <button mat-raised-button (click)="back()" color="primary" (click)="start(2)" type="button">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="c&&(i)" class="gif">
+        <img src="../../assets/gifs/player3.gif"><br>
+        <button mat-raised-button color="primary" (click)="start(3)" type="button">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()"  color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="h&&(i)" class="gif">
+        <img src="../../assets/gifs/player4.gif"><br>
+        <button mat-raised-button color="primary" (click)="start(4)" type="button">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="d&&(i)" class="gif">
+        <img src="../../assets/gifs/player5.jpg"><br>
+        <button mat-raised-button type="button" (click)="start(5)" color="primary">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="e&&(i)" class="gif" >
+        <img src="../../assets/gifs/player6.gif"><br>
+        <button mat-raised-button type="button" (click)="start(6)" color="primary">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="f&&(i)" class="gif">
+        <img src="../../assets/gifs/player7.gif"><br>
+        <button mat-raised-button type="button" (click)="start(7)" color="primary">Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+    <div *ngIf="g&&(i)" class="gif">
+        <img src="../../assets/gifs/player8.gif"><br>
+        <button mat-raised-button type="button" (click)="start(8)" color="primary"> Start the Game</button>&nbsp;&nbsp;&nbsp;
+        <button mat-raised-button (click)="back()" color="primary" type="button">Back</button>
+    </div>
+</div>

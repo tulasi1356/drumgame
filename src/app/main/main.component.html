@@ -1,0 +1,38 @@
+<div class="main1">
+    <div *ngIf="a" class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+              <div class="col-12 user-img">
+                  <img src="https://as2.ftcdn.net/jpg/01/23/28/81/500_F_123288164_4CcvxDk9xWgHKcxL7SyWShPdtjcVeAFY.jpg" width="100">
+              </div>
+          <form (ngSubmit)="onsubmit(name.value)" class="col-12">
+              <div class="form-group">
+                  <input #name name="name" [(ngModel)]='main.name' type="text" class="form-control" placeholder="Enter Username">
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Login</button>
+          </form>
+            </div>
+        </div>
+        </div>
+        
+</div>
+<!-- <div  class="container">
+    < <img src="https://cdn3.vectorstock.com/i/1000x1000/19/62/drum-cartoon-icon-symbol-design-isolated-on-white-vector-26491962.jpg" width="500" height="500"> 
+    <button  class="btn btn-sq-lg btn-primary">
+        <img  src="../../assets/icons8-marching-tenor-drums-50.png" ><br>
+         start
+    </button>
+</div> -->
+<div *ngIf=!a class="">
+<div class="row gif">
+    <img src="../../assets/1489129306_totoro-plays-the-drums.gif">
+</div>
+<div class="row click">
+    <div class="col">
+        <button class="btn btn-sq-lg btn-primary" (click)="player()">
+            <img src="https://image.flaticon.com/icons/svg/2466/2466828.svg" width="100" height="100">
+            Select Player
+        </button>
+    </div>
+    
+</div>

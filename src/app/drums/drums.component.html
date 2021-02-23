@@ -1,0 +1,141 @@
+<head>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+</head>
+
+<div class="description">
+  <p>Every  Question will take 5 Sec total they are 15 chances for u to play this game the score will be displayed in score board</p>
+  <p>Total it takes 75 sec it display in left side</p>
+</div>
+
+<div class="score">
+<button class="btn btn-sq-lg btn-primary">
+  <div class="scoreboard" *ngIf="a1">
+    <img src="../../assets/players/player1.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="b1">
+    <img src="../../assets/players/player2.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="c1">
+    <img src="../../assets/players/player3.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="d1">
+    <img src="../../assets/players/player8.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="e1">
+    <img src="../../assets/players/player4.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="f1">
+    <img src="../../assets/players/player5.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="g1">
+    <img src="../../assets/players/player6.jpg" width="80" height="100"><br>
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+  </div>
+  <div class="scoreboard" *ngIf="h1">
+    <img src="../../assets/players/player7.jpg" width="80" height="100"><br>
+       Score:{{score}}
+    <img src="../../assets/players/piggy-bank.png"width="50" height="50">&nbsp;<p>{{score}}</p>
+    <!-- <p>{{score}}</p> -->
+  </div>
+</button>
+</div>
+<p id="demo"></p>
+<p id="!demo"></p>
+<h1 class="head">Play drums for the music</h1>
+<div class="container">
+ <div class="music">
+  <br><button (click)=music() class="btn btn-primary">Click here to start Game</button><br><br>
+  <button  (click)="to()" class="btn btn-primary" onclick="myfunction()">Click here to access the keyboard</button><br>
+  <p *ngIf="keyboard">click 1 to 9 buttons each one represent 1 sound</p><br><br>
+ </div>
+<div class="timmer">
+  <button  class="btn btn-sq-lg btn-primary">
+    <img src="../../assets/players/time.png" width="80" height="100"><br>
+    TIMER:{{timmer}}
+  </button>
+</div>
+  <div class="box">
+    <div class="imgBx">
+            <img src="https://cdn4.vectorstock.com/i/1000x1000/77/13/drum-player-graphic-vector-14197713.jpg" width="300">
+    </div>
+    <div class="content">
+      <div class="row">
+        <div class="col-2 kick">
+         
+        <div *ngIf=!a>
+          <button class="link" id="myP" (click)='on()'  mat-fab >kick</button>
+        </div>
+          <div *ngIf="a">
+            <button mat-fab (click)='on()' class="btn btn-sq-lg btn-primary" color="primary">kick</button>
+          </div>
+        </div>
+        <div class="col-2 toms" *ngIf="!b">
+         &nbsp; <button class="link" (click)='on1()' id="myP1"  mat-fab >toms</button>
+        </div>
+        <div class="col-2 toms" *ngIf="b">
+          &nbsp; <button class="btn btn-sq-lg btn-primary" color="primary" (click)='on1()' mat-fab>toms</button>
+         </div>
+        
+        <div class="col-2 snare" *ngIf="!c">
+          &nbsp;<button class="link" (click)='on2()' id="myP2" mat-fab >snare</button>
+        </div>
+        <div class="col-2 snare" *ngIf="c">
+          &nbsp;<button  (click)='on2()'class="btn btn-sq-lg btn-primary"  mat-fab color="primary">snare</button>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-4 bass" *ngIf="!e">
+         <br><button  class="link"  (click)='bass()' id="myP3"  mat-fab >bass</button>
+        </div>
+        <div class="col-4 bass" *ngIf="e">
+          <br><button  class="link"   class="btn btn-sq-lg btn-primary" (click)='bass()' color="primary"  mat-fab >bass</button>
+         </div>
+        <div class="col-4 bass" *ngIf="!f">
+          <br>&nbsp;<button class="link"  (click)='cello()'  id="myP4"  mat-fab >cello</button>
+         </div>
+         <div class="col-4 bass" *ngIf="f">
+          <br>&nbsp;<button  class="link"   class="btn btn-sq-lg btn-primary" (click)='cello()' color="primary"   mat-fab >cello</button>
+         </div>
+         <div class="col-4 alph" *ngIf="!g">
+          <br>&nbsp;<button  (click)='alph()' id="myP5" class="link" mat-fab >alph</button>
+        </div>
+        <div class="col-4 alph" *ngIf="g">
+          <br>&nbsp;<button  class="link"   class="btn btn-sq-lg btn-primary" (click)='alph()' color="primary" mat-fab >alph</button>
+        </div>
+       
+      </div>
+      <div class="row">
+        <div class="col a" *ngIf="!i">
+          <br><button  (click)='h()' id="myP6"  class="link" mat-fab >picolo</button>
+        </div>
+        <div class="col a" *ngIf="i">
+          <br><button class="link" class="btn btn-sq-lg btn-primary"  (click)='h()'  color="primary"  mat-fab >picolo</button>
+        </div>
+        <div class="col hi-hat" *ngIf="!d">
+         <br> &nbsp;<button  class="link" id="myP7" (click)='on3()' mat-fab >hi-hat</button>
+        </div>
+        <div class="col hi-hat" *ngIf="d">
+          <br> &nbsp;<button class="link" class="btn btn-sq-lg btn-primary"   color="primary" (click)='on3()' mat-fab >hi-hat</button>
+         </div>
+      <!-- </div> -->
+      <div class="col h" *ngIf="!j">
+        <br>&nbsp;<button  class="link" id="myP8" (click)='o()' mat-fab >sax</button>
+      </div>
+      <div class="col h" *ngIf="j">
+        <br>&nbsp;<button class="link"   class="btn btn-sq-lg btn-primary"  color="primary" (click)='o()' mat-fab >sax</button>
+      </div>
+      </div> 
+    </div>
+  </div>
+</div>

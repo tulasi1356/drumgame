@@ -1,0 +1,325 @@
+
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<!-- <p>teacher-calender works!</p> -->
+<div class="mainCont master-container">
+    <div class="heading">
+        <h1 style="text-align: center;" >Month</h1>
+    </div>
+    <div class="teachercalender">
+        <div id="calender-wrapper">
+            <div id="calender-title" class="parent">
+                <div  matRipple type="button" (click)="prev()" ><span class="material-icons">
+                    keyboard_arrow_left
+                    </span></div>
+                <span >{{duplimonth}}    {{year}}</span>
+                <div matRipple type="button"  (click)="next()" ><span class="material-icons">
+                    keyboard_arrow_right
+                    </span></div>  
+            </div>
+            
+        </div>
+         <div class="flexbox-container">
+           <div>
+            <div class="flexbox-item">Sun</div>
+                <!-- <hr color="gray"> -->
+                <div class="flexbox-item flexbox-item-1" *ngFor="let i of Sun">
+                    <div *ngIf ="isnum(i); else elseBlock1">{{i}}</div>
+                    <ng-template  #elseBlock1 >
+                        <!-- <p>asfe</p> -->
+                        <div (mouseover)="openDialog(i,'',false,false)" (click)="openDialog(i,'',false,false)">{{dat}}</div>
+                        <div *ngIf="assign" class="teacherf">
+                            <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        </div>
+                        <div *ngIf = "classes" class="teacherf">
+                            <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        </div>
+                        <div *ngIf ="events" class="teacherf">
+                            <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                        </div>
+                        <div *ngIf = "assclas" class="teacherf">
+                            <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                            <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        </div>
+                        <div *ngIf = "asseve " class="teacherf">
+                            <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                            <div  (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                        </div>
+                        <div *ngIf= "claseve" class="teacherf">
+                            <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf= "assclasseve" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                
+                       </ng-template>
+    
+            </div>
+           </div>
+           <!-- </div> -->
+            <div>
+                <div class="flexbox-item">Mon</div>
+                <!-- <hr color="gray"> -->
+            <div class="flexbox-item flexbox-item-1" *ngFor="let i of Mon">
+               <div *ngIf ="isnum(i); else elseBlock2">{{i}}</div> 
+               <ng-template #elseBlock2>
+                <div (mouseover)="openDialog(i,'',false,false)" (click)="openDialog(i,'',false,false)">{{dat}}</div>
+                <div *ngIf="assign" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                </div>
+                <div *ngIf = "classes" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf ="events" class="teacherf">
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf = "assclas" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)"  class="teachercirc"></div>
+                </div>
+                <div *ngIf = "asseve " class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "claseve" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "assclasseve" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+            </ng-template>
+            </div>
+            </div>
+           <div>
+            <div class="flexbox-item">Tue</div>
+            <!-- <hr color="gray"> -->
+            <div  class="flexbox-item flexbox-item-1" *ngFor="let i of Tue">
+            <div *ngIf ="isnum(i); else elseBlock3">{{i}}</div>
+            <ng-template #elseBlock3>
+                <div (mouseover)="openDialog(i, '',false,false)" (click)="openDialog(i, '',false,false)">{{dat}}</div>
+                <div *ngIf="assign" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                </div>
+                <div *ngIf = "classes" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf ="events" class="teacherf">
+                    <div  (click) = "openDialog(i,'event',true,false)"class="teachercirc2"></div>
+                </div>
+                <div *ngIf = "assclas" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)"  class="teachercirc"></div>
+                </div>
+                <div *ngIf = "asseve " class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "claseve" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "assclasseve" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)"  class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+            </ng-template>
+     
+            </div>
+           </div>
+           <div >
+            <div class="flexbox-item">Wed</div>
+            <!-- <hr color="gray"> -->
+            <div class="flexbox-item flexbox-item-1" *ngFor="let i of Wed">
+                <div *ngIf ="isnum(i); else elseBlock4">{{i}}</div>
+                <ng-template #elseBlock4>
+                    <div (mouseover)="openDialog(i, '',false,false)" (click)="openDialog(i, '',false,false)">{{dat}}</div>
+                    <div *ngIf="assign" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    </div>
+                    <div *ngIf = "classes" class="teacherf">
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    </div>
+                    <div *ngIf ="events" class="teacherf">
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf = "assclas" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        <div (click) = "openDialog(i,'class',true,false)"  class="teachercirc"></div>
+                    </div>
+                    <div *ngIf = "asseve " class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)"  class="teachercirc1"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf= "claseve" class="teacherf">
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf= "assclasseve" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        <div  (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                </ng-template>
+         
+            
+            </div>
+           </div>
+            <div >
+            <div class="flexbox-item">Thur</div>
+            <!-- <hr color="gray"> -->
+            <div class="flexbox-item flexbox-item-1" *ngFor="let i of Thur">
+                <div *ngIf ="isnum(i); else elseBlock5">{{i}}</div>
+                <ng-template #elseBlock5>
+                    <!-- <p>asfesdgfdh</p> -->
+                    <div (mouseover)="openDialog(i,'',false,false)" (click)="openDialog(i, '',false,false)">{{dat}}</div>
+                <div *ngIf="assign" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                </div>
+                <div *ngIf = "classes" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf ="events" class="teacherf">
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>            
+                   </div>
+                <div *ngIf = "assclas" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf = "asseve " class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "claseve" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "assclasseve" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)"  class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+            </ng-template>
+            </div>
+            </div>
+           <div >
+            <div class="flexbox-item">Fri</div>
+            <!-- <hr color="gray"> -->
+
+            <div class="flexbox-item flexbox-item-1" *ngFor="let i of Fri">
+            <div *ngIf ="isnum(i); else elseBlock6">{{i}}</div> 
+            <ng-template #elseBlock6>
+                <div (mouseover)="openDialog(i,'',false,false)" (click)="openDialog(i, '',false,false)">{{dat}}</div>
+                <div *ngIf="assign" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                </div>
+                <div *ngIf = "classes" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf ="events" class="teacherf">
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf = "assclas" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                </div>
+                <div *ngIf = "asseve " class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)"  class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "claseve" class="teacherf">
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+                <div *ngIf= "assclasseve" class="teacherf">
+                    <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                </div>
+            </ng-template>
+     
+            </div>
+           </div>
+           <div >
+            <div class="flexbox-item">Sat</div>
+            <!-- <hr color="gray"> -->
+            <div class="flexbox-item flexbox-item-1" *ngFor="let i of Sat">
+                <div *ngIf ="isnum(i); else elseBlock7">{{i}}</div>
+                <ng-template #elseBlock7>
+                    
+                    <div (mouseover)="openDialog(i,'',false,false)" (click)="openDialog(i, '',false,false)">{{dat}}</div>
+                    
+    
+                    <div *ngIf="assign" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                    </div>
+                    <div *ngIf = "classes" class="teacherf">
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                    </div>
+                    <div *ngIf ="events" class="teacherf">
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf = "assclas" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+    
+                    </div>
+                    <div *ngIf = "asseve " class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                        
+                    </div>
+                    <div *ngIf= "claseve" class="teacherf">
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                    <div *ngIf= "assclasseve" class="teacherf">
+                        <div (click) = "openDialog(i,'assign',true,false)" class="teachercirc1">
+                           
+                        </div>
+                        <div (click) = "openDialog(i,'class',true,false)" class="teachercirc"></div>
+                        <div (click) = "openDialog(i,'event',true,false)" class="teachercirc2"></div>
+                    </div>
+                </ng-template>    
+            </div>
+           </div>
+           <!-- <mat-divider style="width: 100%;"></mat-divider> -->
+        </div>
+        <!-- <hr color="gray" class="teacherdivider"> -->
+        <!-- <mat-divider style="width: 100%;margin: 20px 100px ;"></mat-divider> -->
+        <div class="teacherfooter">
+            <div class="child1">
+                <div class="teachercir">
+                    <div class="teacherassignment">Classes</div>
+                </div>
+            </div>
+            <div   class="child2">
+                <div class="teachercir1">
+                    <div class="teacherassignment">Assignment</div>    
+                </div>
+            </div>
+            <!-- <div class="gap"></div> -->
+            <div class="child3">
+                <div class="teachercir2">
+                    <div class="gap"></div>
+                    <div class="teacherevent">Events</div>
+                </div>
+               
+            </div>
+            <div (click)="openDialog('','',false,true)" class="addition">
+                <div matTooltip="Add class or event or assignment" class="material-icons" >add_circle_outline</div>
+                <!-- <button   class="addbutton" >+</button> -->
+                <div class="add">Add</div> 
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
