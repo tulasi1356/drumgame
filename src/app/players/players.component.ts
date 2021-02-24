@@ -20,9 +20,6 @@ public i = false;
   constructor(private router: Router,private route: ActivatedRoute) {
     let  f = parseInt(this.route.snapshot.paramMap.get('value'));
     this.value=f;
-    console.log("f=",f)
-    // this.value=f;
-    // console.log("name:",this.value);
     
    }
 
@@ -73,7 +70,6 @@ public i = false;
     this.a = false;
     this.b = false;
     this.c = false;
-    // this.d = false;
     this.e = false;
     this.f = false;
     this.g = false;
@@ -86,7 +82,6 @@ public i = false;
     this.b = false;
     this.c = false;
     this.d = false;
-    // this.e = false;
     this.f = false;
     this.g = false;
     this.h = false;
@@ -99,7 +94,6 @@ public i = false;
     this.c = false;
     this.d = false;
     this.e = false;
-    // this.f = false;
     this.g = false;
     this.h = false;
   }
@@ -112,7 +106,6 @@ public i = false;
     this.d = false;
     this.e = false;
     this.f = false;
-    // this.g = false;
     this.h = false;
   }
   player8(){
@@ -125,10 +118,8 @@ public i = false;
     this.e = false;
     this.f = false;
     this.g = false;
-    // this.h = false;
   }
   start(q1){
-    console.log(q1);
     this.router.navigate(['/players', q1,this.value]);
   }
 }

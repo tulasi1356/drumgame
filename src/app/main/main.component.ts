@@ -3,8 +3,7 @@ import {Router} from '@angular/router';
 import {Main} from '../main';
 import { HttpClient } from '@angular/common/http';
 import {MainService} from '../main.service';
-// import { HttpModule } from '@angular/http';
-// declare var  load;
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -26,7 +25,6 @@ public main=new Main('');
     this.name = e;
    console.log(e);
    this.value=e;
-  //  this.router.navigate(['/main',e]);
  
   }
   player() {
