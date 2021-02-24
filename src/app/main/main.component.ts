@@ -23,18 +23,16 @@ public main=new Main('');
   {
     this.a = false;
     this.name = e;
-   console.log(e);
    this.value=e;
  
   }
   player() {
     this.router.navigate(['/main',this.value]);
-    console.log(this.value);
+ 
     
     }
 onsubmit(a){
   this.click(a)
-  console.log("ts",JSON.stringify(this.main))
   this.ser.transfer(this.main).subscribe(
   )
 }
