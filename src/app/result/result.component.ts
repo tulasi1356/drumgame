@@ -95,7 +95,5 @@ export class ResultComponent implements OnInit {
 
   ngOnInit() {
   }
-leader(){
-  this.router.navigate(['/leader'])
-}
+
 }

@@ -11,7 +11,7 @@ import { PlayersComponent } from './players/players.component';
 import { ResultComponent } from './result/result.component';
 import { PuzzleComponent } from './puzzle/puzzle.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+// import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,7 @@ import { LeaderboardComponent } from './leaderboard/leaderboard.component';
     PlayersComponent,
     ResultComponent,
     PuzzleComponent,
-    LeaderboardComponent,
+    // LeaderboardComponent,
   ],
   imports: [
     BrowserModule,
