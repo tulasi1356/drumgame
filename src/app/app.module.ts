@@ -12,7 +12,6 @@ import { ResultComponent } from './result/result.component';
 import { PuzzleComponent } from './puzzle/puzzle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
-import { CalenderComponent } from './calender/calender.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +21,6 @@ import { CalenderComponent } from './calender/calender.component';
     ResultComponent,
     PuzzleComponent,
     LeaderboardComponent,
-    CalenderComponent
   ],
   imports: [
     BrowserModule,
