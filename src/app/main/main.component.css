@@ -3,6 +3,13 @@
   margin: 0;
   padding: 0;
 }
+.btn {
+margin: 10px;
+padding: 5px;
+padding-left: 20px;
+padding-right: 20px;
+
+}
 .main1{
   font-family: 'Roboto',sans-serif;
   /* background: url('../../assets/players/backgroundimg.jpg') no-repeat center center fixed; */
