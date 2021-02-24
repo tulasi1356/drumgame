@@ -35,9 +35,7 @@ export class DrumsComponent implements OnInit {
     this.pic=id;
     let name = parseInt(this.route.snapshot.paramMap.get('value'));
     this.name=name;
-    console.log("name",name);
-    
-  console.log("q1",id);
+ 
   if (id == 1)
   {
     this.a1 = true;
@@ -88,11 +86,9 @@ export class DrumsComponent implements OnInit {
   audio1.src = "../assets/183097__dwsd__bd-doitlive.wav";
   audio1.play();
   this.a = !this.a;
-   console.log(audio1.src);
 
   if (audio1.src == this.audio.src) {
     this.score = this.score + 1;
-    console.log(this.score); 
   }
   }
   on1() {
@@ -100,10 +96,8 @@ export class DrumsComponent implements OnInit {
     audio2.src="../assets/34843__zin__low-floor-tom-punk.wav";
     audio2.play();
     this.b = !this.b;
-    console.log(audio2.src);
-    if (audio2.src == this.audio.src) {
+        if (audio2.src == this.audio.src) {
     this.score = this.score + 1;
-    console.log(this.score);
     }
   }
   on2(){
@@ -111,11 +105,11 @@ export class DrumsComponent implements OnInit {
     audio3.src="../assets/270156__theriavirra__04c-snare-smooth-cymbals-snares.wav";
     audio3.play();
     this.c = !this.c;
-    console.log(audio3.src);
+    
     if(audio3.src == this.audio.src)
   {
     this.score = this.score + 1;
-    console.log(this.score);
+  
   }
   }
   
@@ -124,11 +118,9 @@ export class DrumsComponent implements OnInit {
     audio4.src="../assets/171488__xicecoffeex__savannah-open-hh.wav";
     audio4.play();
     this.d = !this.d;
-    console.log(audio4.src);
     if(audio4.src == this.audio.src)
     {
     this.score = this.score + 1;
-    console.log(this.score);
    }
   }
 
@@ -137,11 +129,9 @@ export class DrumsComponent implements OnInit {
     audio5.src="  ../assets/87238__zgump__bass-rvb-4.wav";
     audio5.play();
     this.e = !this.e;
-    console.log(audio5.src);
     if(audio5.src == this.audio.src)
     {
     this.score = this.score + 1;
-    console.log(this.score);
     }
   }
   cello(){
@@ -149,11 +139,9 @@ export class DrumsComponent implements OnInit {
     audio6.src=" ../assets/337899__fschaeffer__34cello.wav";
     audio6.play();
     this.f = !this.f;
-    console.log(audio6.src);
     if(audio6.src == this.audio.src)
   {
     this.score = this.score + 1;
-    console.log(this.score);
   }
   }
   alph(){
@@ -161,11 +149,9 @@ export class DrumsComponent implements OnInit {
     audio7.src=" ../assets/175540__alphasnk__flo-x-regis-cb-e1.wav";
     audio7.play();
     this.g = !this.g;
-    console.log(audio7.src);
     if(audio7.src == this.audio.src)
     {
     this.score = this.score + 1;
-    console.log(this.score);
     }
   }
   h(){
@@ -173,11 +159,9 @@ export class DrumsComponent implements OnInit {
     audio8.src=" ../assets/62270__fresh-g__a3.wav";
     audio8.play();
     this.i= !this.i;
-    console.log(audio8.src);
     if(audio8.src == this.audio.src)
   {
     this.score = this.score + 1;
-    console.log(this.score);
   }
   }
   o(){
@@ -185,11 +169,9 @@ export class DrumsComponent implements OnInit {
     audio9.src="../assets/496042__phonosupf__sax-multiphonic-11.wav";
     audio9.play();
     this.j = !this.j;
-    console.log(audio9.src);
     if(audio9.src == this.audio.src)
   {
     this.score = this.score + 1;
-    console.log(this.score);
   }
   }
   music() {
@@ -199,27 +181,26 @@ export class DrumsComponent implements OnInit {
 
   this.rand = this.myArray[Math.floor(Math.random() * this.myArray.length)];
 
-  console.log(this.rand);
   this.audio = new Audio();
   this.audio.src = this.rand;
   this.audio.play();
      if(this.count<=16) { 
        setTimeout(() => {
       this.music();
-        // this.count=this.count+1;
+
       this.timmer=this.timmer+1;
   }, 5000);
   this.finalscore=this.score;
-  // fgfhgfhfghgfhs
+
 
   if(this.count==16)
   {
-    console.log("ts",JSON.stringify(this.finalscore))
+  
     this.Drums.transfer1({score:this.finalscore}).subscribe()
       this.router.navigate(['/drums',this.finalscore,this.pic,this.name]);
   }
 }
-console.log(this.count);
+
   
   }
   to(){
