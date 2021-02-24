@@ -4,7 +4,6 @@ import { DrumsComponent } from './drums/drums.component';
 import { MainComponent } from './main/main.component';
 import { PlayersComponent } from './players/players.component';
 import { ResultComponent } from './result/result.component';
-// import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 
 
 const routes: Routes = [
@@ -15,7 +14,7 @@ const routes: Routes = [
   {path: 'drums', component: DrumsComponent},
   {path: 'main', component: MainComponent},
   {path: 'players/:q1/:value', component: DrumsComponent},
-  // {path:'leader', component: LeaderboardComponent},
+ 
 ];
 
 @NgModule({
